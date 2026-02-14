@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 28px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .yes-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        .no-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .photo-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .photo-section img {
+            width: 250px;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+
+        .message {
+            font-size: 20px;
+            color: #e91e63;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Will You Be My Valentine? 💖</h1>
+
+    <button class="yes-btn" onclick="sayYes()">Yes 💕</button>
+    <button class="no-btn" onclick="sayNo()">No 💔</button>
+
+    <div class="photo-section" id="photoSection">
+        <div class="message">Yayyy! You made me the happiest person! 💖🥰</div>
+        <img src="img/shivdiv.jpeg" alt="Our Photo">
+    </div>
+
+    <div class="message" id="noMessage"></div>
+</div>
+
+<script>
+    function sayYes() {
+        document.getElementById("photoSection").style.display = "block";
+        document.getElementById("noMessage").innerHTML = "";
+    }
+
+    function sayNo() {
+        document.getElementById("noMessage").innerHTML = 
+        "You are not allowed to click NO 😜❤️ Try again!";
+    }
+</script>
+
+</body>
+</html>
